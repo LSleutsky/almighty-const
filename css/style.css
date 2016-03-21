@@ -1,0 +1,49 @@
+.imageGallery,
+.imageGallery_2,
+.imageGallery_3 {
+	list-style:none;
+	margin: 0 auto;
+	padding: 0;
+	display: block;
+	max-width: 780px;
+	text-align: center;
+}
+.imageGallery li,
+.imageGallery_2 li,
+.imageGallery_3 li {
+	display: inline-block;
+	padding: 0px;
+	background:white;
+	margin:0px;
+}
+.imageGallery li img,
+.imageGallery_2 li img,
+.imageGallery_3 li img {
+	display: block;
+  height: 90px;
+  width: 95px;
+}
+.imageGallery a,
+.imageGallery_2 a,
+.imageGallery_3 a {
+	text-decoration: none;
+}
+/** Start Coding Here **/
+#overlay {
+  background:rgba(0,0,0,0.7);
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  display:none;
+  text-align:center;
+}
+
+#overlay img {
+ margin-top: 5%; 
+}
+
+#overlay p {
+ color:white; 
+}

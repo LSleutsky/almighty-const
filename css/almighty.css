@@ -1,0 +1,302 @@
+#banner {
+	background: url("../images/banner_background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 3em 2em 12em 2em;
+	box-shadow: 2px 2px 5px #666;
+}
+
+#banner h2 ~ p {
+	font-size: 1.35em;
+	font-weight: 600;
+}
+
+#logo p {
+	font-weight: 900;
+	font-size: 2.5em;
+}
+
+fieldset {
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	padding: 1em;
+}
+
+#estimate input,
+#estimate label {
+	margin: 0;
+}
+
+.featured img {
+	min-height: 350px;
+	max-height: 100%;
+}
+
+.tap_call,
+.tap_call_bottom {
+	display: none;
+}
+
+#logo a {
+	text-decoration: none;
+}
+
+#landscaping_banner {
+	background: url("../images/landscaping/landscaping_banner.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding: 4em;
+	box-shadow: 2px 2px 5px #666;
+}
+
+#water_banner {
+	background: url("../images/waterproofing/water_banner2.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding: 4em;
+	box-shadow: 2px 2px 5px #666;
+}
+
+#remod_banner {
+	background: url("../images/remodeling/remod_banner.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding: 4em;
+	box-shadow: 2px 2px 5px #666;
+}
+
+.but_dis {
+	visibility: hidden;
+}
+
+#peek_pics img {
+	box-shadow: 3px 3px 5px #666;
+	
+}
+
+li img {
+	box-shadow: 2px 2px 5px #666;
+}
+
+#remod_back {
+	box-shadow: 3px 3px 5px #ccc;
+}
+
+#water_back {
+	box-shadow: 3px 3px 5px #ccc;
+}
+
+#landscaping_back {
+	box-shadow: 3px 3px 5px #ccc;
+}
+
+#contact_button a,
+#about_button a {
+	width: 95%;
+}
+
+#about_button {
+	margin-top: 15px;
+}
+
+.inner header a,
+article a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.service_details li {
+	list-style-type: disc; 
+}
+
+.widget p {
+	font-weight: 600;
+}
+
+#thank_you {
+	text-align: center;
+	font-size: 2em;
+}
+
+#sidebar_gallery a {
+	margin: 5px;
+	width: 100%;
+}
+
+#copyright .menu li a {
+	text-decoration: none;
+}
+
+/*****************************************************************************************
+Form CSS
+******************************************************************************************/
+
+#contactForm #estimate{
+	border-radius: 8px;
+	width: 90%;
+	margin: -30px auto;
+}
+
+#contactForm #estimate fieldset {
+	background: #eee;
+	box-shadow: 2px 2px 5px #777;
+}
+
+#contactForm legend {
+	font-size: 2em;
+	font-weight: 900;
+	color: #0090c5;
+}
+
+#contactForm #estimate label {
+	display: block;
+	font-size: 1.3em;
+}
+
+#contactForm #estimate label[for="description"] {
+	margin-top: 10px;
+}
+
+#contactForm #estimate input,
+#contactForm #estimate select {
+	border-radius: 10px;
+	box-shadow: inset 2px 2px 5px #888;
+	outline: none;
+	text-transform: capitalize;
+	width: 100%;
+	font-weight: 500;
+	font-size: 1.2em;
+}
+
+#contactForm #estimate input[type="email"] {
+	text-transform: none;
+}
+
+#contactForm #estimate textarea {
+	width: 100%;
+	border-radius: 10px;
+	box-shadow: inset 2px 2px 5px #888;
+	outline: none;
+	margin-top: -25px;
+	font-size: 1.2em;
+}
+
+#contactForm #estimate select {
+	box-shadow: none;
+	outline: none;
+	border: 1px solid #ccc;
+	font-weight: 600;
+}
+
+#contactForm #estimate input[type="submit"],
+#contactForm #estimate input[type="reset"] {
+	display: inline-block;
+	width: 175px;
+	box-shadow: 2px 2px 5px #888;
+	font-weight: 900;
+}
+
+#contactForm #estimate input[type="reset"] {
+	margin: 10px;
+}
+
+#contactForm #estimate input[type="text"],
+#contactForm #estimate input[type="email"] {
+	padding: 0px 12px;
+}
+
+#buttons {
+	text-align: center;
+	margin: 0 auto;
+}
+
+/*****************************************************************************************
+Media Queries
+******************************************************************************************/
+
+@media screen and (min-width: 320px) {
+	#landscaping_banner h2 {
+		font-size: 2em;
+		text-align: center;
+	}
+
+	#water_banner h2 {
+		font-size: 2em;
+		text-align: center;
+	}
+
+	#remod_banner h2 {
+		font-size: 2em;
+		text-align: center;
+	}
+}
+
+@media screen and (min-width: 480px) {
+	#landscaping_banner h2 {
+		font-size: 3.5em;
+		text-align: center;
+	}
+
+	#water_banner h2 {
+		font-size: 3.5em;
+		text-align: center;
+	}
+
+	#remod_banner h2 {
+		font-size: 3.5em;
+		text-align: center;
+	}
+}
+
+@media screen and (min-width: 981px) {
+	#landscaping_banner h2 {
+		font-size: 3.5em;
+		text-align: left;
+	}
+
+	#water_banner h2 {
+		font-size: 3.5em;
+		text-align: left;
+	}
+
+	#remod_banner h2 {
+		font-size: 3.5em;
+		text-align: left;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.tap_call {
+		display: block;
+		margin: 10px 0 -8px 0;
+		text-align: center;
+	}
+
+	.tap_call_bottom {
+		display: block;
+		margin: 30px 0 0 0;
+		text-align: center;
+	}
+
+	.tap_call img,
+	.tap_call_bottom img {
+		width: 200px;
+	}
+
+	#banner h2 {
+		font-size: 1.81em;
+	}
+
+	#banner {
+		padding: 4em 1.5em;
+	}
+}
+
+@media screen and (max-width: 736px) {
+	h2 {
+		font-size: 2em;
+	}
+}
