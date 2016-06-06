@@ -23,37 +23,37 @@
 							</div>
 
 						<!-- Nav -->
-							<nav id="nav">
-								<ul>
-									<li><a href="index.html">Home</a>
-										<ul>
-											<li><a href="about.html">About Us</a></li>
-											<li><a href="contact.html">Contact Us</a></li>
-										</ul>
-									</li>
-									<li>
-										<a href="landscaping.html">Landscaping</a>
-										<ul>
-											<li><a href="landscaping.html#hardscaping">Hardscaping</a></li>
-											<li><a href="landscaping.html#fencing">Fencing</a></li>
-											<li><a href="landscaping_gallery.html">Gallery</a></li>
-										</ul>
-									</li>
-									<li>
-										<a href="waterproofing.html">Waterproofing</a>
-										<ul>
-											<li><a href="waterproofing.html#mold">Mold Removal</a></li>
-											<li><a href="wp_gallery.html">Gallery</a></li>
-										</ul>
-									</li>
-									<li>
-										<a href="remodeling.html">Remodeling</a>
-										<ul>
-											<li><a href="remod_gallery.html">Gallery</a></li>
-										</ul>
-									</li>
-								</ul>
-							</nav>
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html">Home</a>
+									<ul>
+										<li><a href="about.html">About Us</a></li>
+										<li><a href="contact.html">Contact Us</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="painting.html">Painting</a>
+									<ul>
+										<li><a href="painting.html#sheetrock">Sheetrock</a></li>
+										<li><a href="painting.html#tape_spackle">Tape & Spackle</a></li>
+										<li><a href="paint_gallery.html">Gallery</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="waterproofing.html">Waterproofing</a>
+									<ul>
+										<li><a href="waterproofing.html#mold">Mold Removal</a></li>
+										<li><a href="wp_gallery.html">Gallery</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="remodeling.html">Remodeling</a>
+									<ul>
+										<li><a href="remod_gallery.html">Gallery</a></li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
 
 					</header>
 				</div>
@@ -82,42 +82,42 @@
 						<div id="content">
 
 <?php
- 
-if(isset($_POST['submit'])) { 
+
+if(isset($_POST['submit'])) {
     // EDIT THE 2 LINES BELOW AS REQUIRED
- 
+
     $email_to = "almightyconstructionllc@gmail.com";
- 
+
     $email_subject = "Online Contact Form Submission";
- 
-     
- 
-     
- 
+
+
+
+
+
     function died($error) {
- 
+
         // your error code can go here
- 
+
         echo "We are very sorry, but there were error(s) found with the form you submitted.";
- 
+
         echo "These errors appear below.<br /><br />";
- 
+
         echo $error."<br /><br />";
- 
+
         echo "Please go back and fix these errors.<br /><br />";
- 
+
         die();
- 
+
     }
- 
-     
- 
+
+
+
     // validation expected data exists
- 
+
     if(!isset($_POST['firstName']) ||
- 
+
         !isset($_POST['lastName']) ||
- 
+
         !isset($_POST['address']) ||
 
         !isset($_POST['city']) ||
@@ -131,19 +131,19 @@ if(isset($_POST['submit'])) {
         !isset($_POST['email']) ||
 
         !isset($_POST['issue'])) {
- 
-        died('We are sorry, but there appears to be a problem with the form you submitted.');       
- 
+
+        died('We are sorry, but there appears to be a problem with the form you submitted.');
+
     }
- 
-     
- 
+
+
+
     $firstName = $_POST['firstName']; // required
- 
+
     $spouseName = $_POST['spouseName']; // not required
- 
+
     $lastName = $_POST['lastName']; // required
- 
+
     $address = $_POST['address']; // required
 
     $city = $_POST['city']; // required
@@ -161,60 +161,60 @@ if(isset($_POST['submit'])) {
     $issue = $_POST['issue']; // not required
 
     $description = $_POST['description']; // not required
- 
-     
- 
+
+
+
     $error_message = "";
- 
+
     $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
- 
+
   if(!preg_match($email_exp,$email_from)) {
- 
+
     $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
- 
+
   }
- 
+
     $string_exp = "/^[A-Za-z .'-]+$/";
- 
+
   if(!preg_match($string_exp,$firstName)) {
- 
+
     $error_message .= 'The First Name you entered does not appear to be valid.<br />';
- 
+
   }
- 
+
   if(!preg_match($string_exp,$lastName)) {
- 
+
     $error_message .= 'The Last Name you entered does not appear to be valid.<br />';
- 
+
   }
- 
- 
+
+
   if(strlen($error_message) > 0) {
- 
+
     died($error_message);
- 
+
   }
- 
+
     $email_message = "Form details below.\n\n";
- 
-     
- 
+
+
+
     function clean_string($string) {
- 
+
       $bad = array("content-type","bcc:","to:","cc:","href");
- 
+
       return str_replace($bad,"",$string);
- 
+
     }
- 
-     
- 
+
+
+
     $email_message .= "First Name: ".clean_string($firstName)."\n";
- 
+
     $email_message .= "Spouse Name: ".clean_string($spouseName)."\n";
- 
+
     $email_message .= "Last Name: ".clean_string($lastName)."\n";
- 
+
     $email_message .= "Address: ".clean_string($address)."\n";
 
     $email_message .= "City: ".clean_string($city)."\n";
@@ -232,34 +232,34 @@ if(isset($_POST['submit'])) {
     $email_message .= "Issue: ".clean_string($issue)."\n";
 
     $email_message .= "Description: ".clean_string($description)."\n";
- 
-      
- 
+
+
+
 // create email headers
- 
+
 $headers = 'From: '.$email_from."\r\n".
- 
+
 'Reply-To: '.$email_from."\r\n" .
- 
+
 'X-Mailer: PHP/' . phpversion();
- 
-@mail($email_to, $email_subject, $email_message, $headers);  
- 
+
+@mail($email_to, $email_subject, $email_message, $headers);
+
 ?>
- 
+
 <!-- include your own success html here -->
- 
+
 	<h1 id="thank_you">Thank you for contacting us using our submission form! We'll do our best to contact you within 24 hours.
 	<br /><br />If you need immediate assistance, please call us at 1-609-331-7060.
 	<br /><br />Thank you.</h1>
- 
- 
+
+
 <?php
- 
+
 }
 ?>
 
-								
+
 
 
 						</div>
@@ -276,7 +276,7 @@ $headers = 'From: '.$email_from."\r\n".
 									<section class="widget links">
 										<h3>Site</h3>
 										<ul class="style2">
-											<li><a href="landscaping.html">Landscaping</a></li>
+											<li><a href="painting.html">Painting</a></li>
 											<li><a href="waterproofing.html">Waterproofing</a></li>
 											<li><a href="remodeling.html">Remodeling</a></li>
 											<li><a href="contact.html">Contact Us</a></li>
@@ -291,7 +291,7 @@ $headers = 'From: '.$email_from."\r\n".
 									<section class="widget links">
 										<h3>Specialties</h3>
 										<ul class="style2">
-											<li><a href="landscaping.html#hardscaping">Hardscaping Designs</a></li>
+											<li><a href="hardscaping.html">Hardscaping Designs</a></li>
 											<li><a href="waterproofing.html#mold">Certified Mold Removal</a></li>
 											<li><a href="remodeling.html#basements">Basement Finishing</a></li>
 											<li><a href="remodeling.html#kitchens">Kitchen Remodel</a></li>
@@ -306,8 +306,8 @@ $headers = 'From: '.$email_from."\r\n".
 									<section class="widget links">
 										<h3>Galleries</h3>
 										<ul class="style2">
-											<li><a href="landscaping_gallery.html">Landscaping & Hardscaping</a></li>
-											<li><a href="landscaping_gallery.html#fence_gallery">Fencing</a></li>
+											<li><a href="paint_gallery.html">Painting</a></li>
+											<li><a href="hardscaping_gallery.html">Hardscaping</a></li>
 											<li><a href="wp_gallery.html">Waterproofing & Mold Remediation</a></li>
 											<li><a href="remod_gallery.html">Remodeling</a></li>
 											<li><a href="gallery.html">Projects</a></li>
@@ -322,10 +322,10 @@ $headers = 'From: '.$email_from."\r\n".
 										<h3>Contact Us</h3>
 										<ul>
 											<li><a href="tel:1-609-331-7060" class="icon fa-phone"><span class="label">Call</span></a></li>
-											<li><a href="https://www.facebook.com/AlmightyConstructionLLC" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+											<li><a href="https://www.facebook.com/AlmightyConstructionLLC" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
 											<li><a href="mailto:almightyconstructionllc@gmail.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
 										</ul>
-										<p>PA License# PA119749<br />
+										<p>PA License # PA119749<br />
 									</section>
 
 							</div>
